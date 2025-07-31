@@ -48,7 +48,9 @@ const Index = () => {
           {/* Right Icons */}
           <div className="flex items-center gap-3 lg:gap-4">
             <Search size={20} className="lg:hidden cursor-pointer hover:text-gray-600 transition-colors" />
-            <ShoppingCart size={20} className="cursor-pointer hover:text-gray-600 transition-colors" />
+            <Link to="/cart">
+              <ShoppingCart size={20} className="cursor-pointer hover:text-gray-600 transition-colors" />
+            </Link>
             <User size={20} className="cursor-pointer hover:text-gray-600 transition-colors" />
           </div>
         </div>

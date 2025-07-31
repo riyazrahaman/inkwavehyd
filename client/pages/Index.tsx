@@ -54,32 +54,32 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gray-100 px-4 lg:px-24 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-black leading-tight">
-              FIND CLOTHES THAT MATCHES YOUR STYLE
+      <section className="relative bg-gray-100 px-4 lg:px-24 py-12 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
+          <div className="space-y-6 lg:space-y-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black leading-tight lg:leading-none tracking-tight">
+              FIND CLOTHES<br className="hidden lg:block" /> THAT MATCHES<br className="hidden lg:block" /> YOUR STYLE
             </h1>
-            <p className="text-gray-600 text-base lg:text-lg max-w-lg">
+            <p className="text-gray-600 text-base lg:text-lg max-w-lg leading-relaxed">
               Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
             </p>
-            <button className="bg-black text-white px-12 py-4 rounded-full text-lg hover:bg-gray-800 transition-colors">
+            <button className="bg-black text-white px-12 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors">
               Shop Now
             </button>
-            
+
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-8">
+            <div className="flex flex-wrap gap-6 lg:gap-8 pt-6 lg:pt-8">
               <div>
-                <div className="text-3xl lg:text-4xl font-bold">200+</div>
-                <div className="text-gray-600 text-sm">International Brands</div>
+                <div className="text-2xl lg:text-4xl font-bold">200+</div>
+                <div className="text-gray-600 text-xs lg:text-sm">International Brands</div>
               </div>
-              <div className="border-l border-gray-300 pl-8">
-                <div className="text-3xl lg:text-4xl font-bold">2,000+</div>
-                <div className="text-gray-600 text-sm">High-Quality Products</div>
+              <div className="border-l border-gray-300 pl-6 lg:pl-8">
+                <div className="text-2xl lg:text-4xl font-bold">2,000+</div>
+                <div className="text-gray-600 text-xs lg:text-sm">High-Quality Products</div>
               </div>
-              <div className="border-l border-gray-300 pl-8">
-                <div className="text-3xl lg:text-4xl font-bold">30,000+</div>
-                <div className="text-gray-600 text-sm">Happy Customers</div>
+              <div className="border-l border-gray-300 pl-6 lg:pl-8">
+                <div className="text-2xl lg:text-4xl font-bold">30,000+</div>
+                <div className="text-gray-600 text-xs lg:text-sm">Happy Customers</div>
               </div>
             </div>
           </div>

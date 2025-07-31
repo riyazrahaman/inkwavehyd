@@ -281,7 +281,7 @@ const Category = () => {
         <div className="flex-1">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl lg:text-3xl font-bold">Casual</h1>
+            <h1 className="text-2xl lg:text-3xl font-bold">{categoryName}</h1>
             <div className="flex items-center gap-3 text-sm">
               <span className="text-gray-600">Showing 1-10 of 100 Products</span>
               <div className="flex items-center gap-1">

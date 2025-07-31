@@ -452,7 +452,7 @@ const Category = () => {
           <div className="border-t border-gray-200 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-600 text-sm mb-4 md:mb-0">
-                Shop.co © 2000-2023, All Rights Reserved
+                inkwavehyd © 2000-2023, All Rights Reserved
               </p>
               <div className="flex gap-3">
                 {/* Payment Icons */}

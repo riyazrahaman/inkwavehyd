@@ -1,55 +1,75 @@
-import { Star, Search, ShoppingCart, User, X, ChevronDown, Mail, ChevronRight, Minus, Plus, Trash2, ArrowRight, Tag } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import {
+  Star,
+  Search,
+  ShoppingCart,
+  User,
+  X,
+  ChevronDown,
+  Mail,
+  ChevronRight,
+  Minus,
+  Plus,
+  Trash2,
+  ArrowRight,
+  Tag,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/884f68de3c05e22bbe60c8d89385b15addb9e606?width=250",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/884f68de3c05e22bbe60c8d89385b15addb9e606?width=250",
       name: "Gradient Graphic T-shirt",
       size: "Large",
       color: "White",
       price: 145,
-      quantity: 1
+      quantity: 1,
     },
     {
       id: 2,
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/b516d75070eb419a45e0d23e6ad0b4f5d9b9f6c0?width=250",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/b516d75070eb419a45e0d23e6ad0b4f5d9b9f6c0?width=250",
       name: "CHECKERED SHIRT",
       size: "Medium",
       color: "Red",
       price: 180,
-      quantity: 1
+      quantity: 1,
     },
     {
       id: 3,
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/dec97173ccbf5ece314def44e30b432bb46511f0?width=204",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/dec97173ccbf5ece314def44e30b432bb46511f0?width=204",
       name: "SKINNY FIT JEANS",
-      size: "Large", 
+      size: "Large",
       color: "Blue",
       price: 240,
-      quantity: 1
-    }
+      quantity: 1,
+    },
   ]);
 
-  const [promoCode, setPromoCode] = useState('');
+  const [promoCode, setPromoCode] = useState("");
 
   const updateQuantity = (id: number, change: number) => {
-    setCartItems(items => 
-      items.map(item => 
-        item.id === id 
+    setCartItems((items) =>
+      items.map((item) =>
+        item.id === id
           ? { ...item, quantity: Math.max(1, item.quantity + change) }
-          : item
-      )
+          : item,
+      ),
     );
   };
 
   const removeItem = (id: number) => {
-    setCartItems(items => items.filter(item => item.id !== id));
+    setCartItems((items) => items.filter((item) => item.id !== id));
   };
 
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const subtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
   const discount = Math.round(subtotal * 0.2); // 20% discount
   const deliveryFee = 15;
   const total = subtotal - discount + deliveryFee;
@@ -59,7 +79,7 @@ const Cart = () => {
       {/* Top Banner */}
       <div className="bg-black text-white px-4 py-2 text-center relative">
         <div className="text-sm">
-          Sign up and get 20% off to your first order.{' '}
+          Sign up and get 20% off to your first order.{" "}
           <span className="underline cursor-pointer">Sign Up Now</span>
         </div>
         <X className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer" />
@@ -67,10 +87,15 @@ const Cart = () => {
 
       {/* Header */}
       <div className="flex justify-between items-center px-4 lg:px-24 py-4 max-w-7xl mx-auto">
-        <Link to="/" className="text-2xl lg:text-3xl font-black">inkwavehyd</Link>
-        
+        <Link to="/" className="text-2xl lg:text-3xl font-black">
+          inkwavehyd
+        </Link>
+
         <div className="hidden lg:flex items-center gap-6">
-          <Link to="/category/casual" className="flex items-center gap-1 cursor-pointer">
+          <Link
+            to="/category/casual"
+            className="flex items-center gap-1 cursor-pointer"
+          >
             <span>Shop</span>
             <ChevronDown className="w-4 h-4" />
           </Link>
@@ -82,8 +107,8 @@ const Cart = () => {
         <div className="flex-1 max-w-md mx-4 lg:mx-8">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Search for products..."
               className="w-full pl-10 pr-4 py-3 bg-gray-100 rounded-full text-sm"
             />
@@ -102,7 +127,9 @@ const Cart = () => {
       {/* Breadcrumb */}
       <div className="px-4 lg:px-24 py-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-2 text-sm">
-          <Link to="/" className="text-gray-600 hover:text-black">Home</Link>
+          <Link to="/" className="text-gray-600 hover:text-black">
+            Home
+          </Link>
           <ChevronRight className="w-4 h-4 text-gray-600" />
           <span className="text-black">Cart</span>
         </div>
@@ -122,8 +149,8 @@ const Cart = () => {
                     <div className="flex items-center gap-4">
                       {/* Product Image */}
                       <div className="w-24 h-32 bg-gray-100 rounded-lg flex-shrink-0 overflow-hidden">
-                        <img 
-                          src={item.image} 
+                        <img
+                          src={item.image}
                           alt={item.name}
                           className="w-full h-full object-cover"
                         />
@@ -133,17 +160,31 @@ const Cart = () => {
                       <div className="flex-1">
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
-                            <h3 className="font-bold text-lg mb-1">{item.name}</h3>
+                            <h3 className="font-bold text-lg mb-1">
+                              {item.name}
+                            </h3>
                             <div className="text-sm text-gray-600 space-y-1">
-                              <div>Size: <span className="text-gray-500">{item.size}</span></div>
-                              <div>Color: <span className="text-gray-500">{item.color}</span></div>
+                              <div>
+                                Size:{" "}
+                                <span className="text-gray-500">
+                                  {item.size}
+                                </span>
+                              </div>
+                              <div>
+                                Color:{" "}
+                                <span className="text-gray-500">
+                                  {item.color}
+                                </span>
+                              </div>
                             </div>
-                            <div className="font-bold text-xl mt-3">${item.price}</div>
+                            <div className="font-bold text-xl mt-3">
+                              ${item.price}
+                            </div>
                           </div>
 
                           {/* Delete and Quantity Controls */}
                           <div className="flex flex-col items-end gap-3">
-                            <button 
+                            <button
                               onClick={() => removeItem(item.id)}
                               className="text-red-500 hover:text-red-700"
                             >
@@ -152,14 +193,16 @@ const Cart = () => {
 
                             {/* Quantity Controls */}
                             <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
-                              <button 
+                              <button
                                 onClick={() => updateQuantity(item.id, -1)}
                                 className="p-1"
                               >
                                 <Minus className="w-4 h-4" />
                               </button>
-                              <span className="mx-4 font-medium">{item.quantity}</span>
-                              <button 
+                              <span className="mx-4 font-medium">
+                                {item.quantity}
+                              </span>
+                              <button
                                 onClick={() => updateQuantity(item.id, 1)}
                                 className="p-1"
                               >
@@ -170,7 +213,7 @@ const Cart = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Divider */}
                     {index < cartItems.length - 1 && (
                       <div className="border-t border-gray-200 mt-6"></div>
@@ -185,23 +228,23 @@ const Cart = () => {
           <div className="lg:w-96">
             <div className="border border-gray-200 rounded-3xl p-6 sticky top-6">
               <h2 className="text-2xl font-bold mb-6">Order Summary</h2>
-              
+
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
                   <span className="font-bold">${subtotal}</span>
                 </div>
-                
+
                 <div className="flex justify-between">
                   <span className="text-gray-600">Discount (-20%)</span>
                   <span className="font-bold text-red-500">-${discount}</span>
                 </div>
-                
+
                 <div className="flex justify-between">
                   <span className="text-gray-600">Delivery Fee</span>
                   <span className="font-bold">${deliveryFee}</span>
                 </div>
-                
+
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between">
                     <span className="text-lg">Total</span>
@@ -247,8 +290,8 @@ const Cart = () => {
             <div className="flex flex-col gap-4 w-full max-w-sm">
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="Enter your email address"
                   className="w-full pl-12 pr-4 py-3 rounded-full text-black text-sm"
                 />
@@ -268,7 +311,8 @@ const Cart = () => {
             <div className="lg:col-span-1">
               <h3 className="text-2xl font-black mb-6">inkwavehyd</h3>
               <p className="text-gray-600 mb-6">
-                We have clothes that suits your style and which you're proud to wear. From women to men.
+                We have clothes that suits your style and which you're proud to
+                wear. From women to men.
               </p>
               <div className="flex gap-3">
                 {/* Social Media Icons */}
@@ -278,9 +322,11 @@ const Cart = () => {
                 <div className="w-7 h-7 bg-white border border-gray-200 rounded-full"></div>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="font-medium mb-6 uppercase tracking-wider">Company</h4>
+              <h4 className="font-medium mb-6 uppercase tracking-wider">
+                Company
+              </h4>
               <div className="space-y-3 text-gray-600">
                 <div>About</div>
                 <div>Features</div>
@@ -288,9 +334,11 @@ const Cart = () => {
                 <div>Career</div>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="font-medium mb-6 uppercase tracking-wider">Help</h4>
+              <h4 className="font-medium mb-6 uppercase tracking-wider">
+                Help
+              </h4>
               <div className="space-y-3 text-gray-600">
                 <div>Customer Support</div>
                 <div>Delivery Details</div>
@@ -298,7 +346,7 @@ const Cart = () => {
                 <div>Privacy Policy</div>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-medium mb-6 uppercase tracking-wider">FAQ</h4>
               <div className="space-y-3 text-gray-600">
@@ -308,9 +356,11 @@ const Cart = () => {
                 <div>Payments</div>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="font-medium mb-6 uppercase tracking-wider">Resources</h4>
+              <h4 className="font-medium mb-6 uppercase tracking-wider">
+                Resources
+              </h4>
               <div className="space-y-3 text-gray-600">
                 <div>Free eBooks</div>
                 <div>Development Tutorial</div>
@@ -319,7 +369,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-200 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-600 text-sm mb-4 md:mb-0">
@@ -327,11 +377,21 @@ const Cart = () => {
               </p>
               <div className="flex gap-3">
                 {/* Payment Icons */}
-                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">Visa</div>
-                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">MC</div>
-                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">PayPal</div>
-                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">Pay</div>
-                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">GPay</div>
+                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">
+                  Visa
+                </div>
+                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">
+                  MC
+                </div>
+                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">
+                  PayPal
+                </div>
+                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">
+                  Pay
+                </div>
+                <div className="w-12 h-8 bg-white border border-gray-200 rounded flex items-center justify-center text-xs">
+                  GPay
+                </div>
               </div>
             </div>
           </div>

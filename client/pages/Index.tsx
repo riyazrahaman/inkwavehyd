@@ -186,19 +186,19 @@ const Index = () => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-12">
-          <button className="border border-gray-300 px-12 py-3 rounded-full hover:bg-gray-50 transition-colors">
+        <div className="text-center mt-8 lg:mt-12">
+          <button className="border border-gray-300 px-8 lg:px-12 py-3 rounded-full hover:bg-gray-50 transition-colors font-medium">
             View All
           </button>
         </div>
       </section>
 
       {/* Divider */}
-      <div className="border-t border-gray-200 mx-4 lg:mx-24"></div>
+      <div className="border-t border-gray-200 mx-4 lg:mx-24 max-w-7xl lg:mx-auto"></div>
 
       {/* Top Selling */}
-      <section className="px-4 lg:px-24 py-16">
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-12">TOP SELLING</h2>
+      <section className="px-4 lg:px-24 py-12 lg:py-16 max-w-7xl mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-black text-center mb-8 lg:mb-12 tracking-tight">TOP SELLING</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {

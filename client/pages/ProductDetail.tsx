@@ -572,7 +572,7 @@ const ProductDetail = () => {
         
         <div className="border-t border-gray-300 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 text-sm">Shop.co © 2000-2023, All Rights Reserved</p>
+            <p className="text-gray-600 text-sm">inkwavehyd © 2000-2023, All Rights Reserved</p>
             <div className="flex gap-2">
               <div className="w-12 h-8 bg-white border border-gray-200 rounded"></div>
               <div className="w-12 h-8 bg-white border border-gray-200 rounded"></div>

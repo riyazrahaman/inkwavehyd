@@ -142,7 +142,7 @@ const ProductDetail = () => {
       <header className="border-b border-gray-100 px-4 lg:px-24 py-4">
         <div className="flex items-center justify-between gap-4 lg:gap-8">
           {/* Logo */}
-          <Link to="/" className="text-2xl lg:text-3xl font-black text-black tracking-tight">SHOP.CO</Link>
+          <Link to="/" className="text-2xl lg:text-3xl font-black text-black tracking-tight">inkwavehyd</Link>
           
           {/* Navigation Menu - Hidden on mobile */}
           <nav className="hidden lg:flex items-center gap-6">

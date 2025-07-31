@@ -141,7 +141,7 @@ const Category = () => {
         <div className="flex items-center gap-2 text-sm">
           <Link to="/" className="text-gray-600 hover:text-black">Home</Link>
           <ChevronRight className="w-4 h-4 text-gray-600" />
-          <span className="text-black">Casual</span>
+          <span className="text-black">{categoryName}</span>
         </div>
       </div>
 

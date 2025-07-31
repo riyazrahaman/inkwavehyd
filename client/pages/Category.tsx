@@ -128,7 +128,9 @@ const Category = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <ShoppingCart className="w-6 h-6 cursor-pointer" />
+          <Link to="/cart">
+            <ShoppingCart className="w-6 h-6 cursor-pointer" />
+          </Link>
           <User className="w-6 h-6 cursor-pointer" />
         </div>
       </div>

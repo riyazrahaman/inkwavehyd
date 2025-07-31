@@ -3,6 +3,9 @@ import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 const Category = () => {
+  const { category } = useParams();
+  const categoryName = category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Casual';
+
   const [selectedSize, setSelectedSize] = useState('Large');
   const [selectedColors, setSelectedColors] = useState([0]); // Blue selected by default
   const [priceRange, setPriceRange] = useState([50, 200]);

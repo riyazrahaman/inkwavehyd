@@ -207,6 +207,7 @@ const Index = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
+              id: "5",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/ccf3226aaf2b1d5fc854046e4a85d7f1b1126cd2?width=592",
               name: "VERTICAL STRIPED SHIRT",
               rating: 5.0,
@@ -215,28 +216,31 @@ const Index = () => {
               discount: "-20%"
             },
             {
+              id: "6",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/8ee068a8aa0dab44e438466efe12bc26c7c6bfaf?width=588",
               name: "COURAGE GRAPHIC T-SHIRT",
               rating: 4.0,
               price: "$145"
             },
             {
+              id: "7",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/e551af5ec708f3bcf7696dd4e2f94071a9d2a1da?width=592",
               name: "LOOSE FIT BERMUDA SHORTS",
               rating: 3.0,
               price: "$80"
             },
             {
+              id: "8",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/39c3606a47758a2493ba802006ec1bceb53bda67?width=504",
               name: "FADED SKINNY JEANS",
               rating: 4.5,
               price: "$210"
             }
-          ].map((product, index) => (
-            <div key={index} className="group cursor-pointer">
+          ].map((product) => (
+            <Link key={product.id} to={`/product/${product.id}`} className="group cursor-pointer block">
               <div className="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-square">
-                <img 
-                  src={product.image} 
+                <img
+                  src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -245,9 +249,9 @@ const Index = () => {
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      size={16} 
+                    <Star
+                      key={i}
+                      size={16}
                       className={i < Math.floor(product.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}
                     />
                   ))}
@@ -263,7 +267,7 @@ const Index = () => {
                   </>
                 )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="text-center mt-12">

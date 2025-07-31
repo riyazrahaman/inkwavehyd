@@ -1,5 +1,5 @@
 import { Star, Search, ShoppingCart, User, X, ChevronDown, Mail, ChevronRight, ChevronLeft, SlidersHorizontal } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 const Category = () => {

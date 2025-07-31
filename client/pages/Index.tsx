@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Search, ShoppingCart, User, X, ChevronDown, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (

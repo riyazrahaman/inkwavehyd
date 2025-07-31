@@ -64,9 +64,9 @@ const Index = () => {
             <p className="text-gray-600 text-base lg:text-lg max-w-lg leading-relaxed">
               Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
             </p>
-            <button className="bg-black text-white px-12 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors">
+            <Link to="/category/casual" className="bg-black text-white px-12 py-4 rounded-full text-base lg:text-lg font-medium hover:bg-gray-800 transition-colors inline-block text-center">
               Shop Now
-            </button>
+            </Link>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-6 lg:gap-8 pt-6 lg:pt-8">

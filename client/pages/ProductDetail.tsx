@@ -517,7 +517,7 @@ const ProductDetail = () => {
       <footer className="bg-gray-100 px-4 lg:px-24 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div className="col-span-2 lg:col-span-1">
-            <div className="text-2xl font-bold mb-4">SHOP.CO</div>
+            <div className="text-2xl font-bold mb-4">inkwavehyd</div>
             <p className="text-gray-600 mb-6 text-sm">
               We have clothes that suits your style and which you're proud to wear. From women to men.
             </p>

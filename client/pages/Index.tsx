@@ -24,10 +24,10 @@ const Index = () => {
 
           {/* Navigation Menu - Hidden on mobile */}
           <nav className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors">
+            <Link to="/category/casual" className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors">
               <span className="font-medium">Shop</span>
               <ChevronDown size={16} />
-            </div>
+            </Link>
             <span className="cursor-pointer hover:text-gray-600 transition-colors font-medium">On Sale</span>
             <span className="cursor-pointer hover:text-gray-600 transition-colors font-medium">New Arrivals</span>
             <span className="cursor-pointer hover:text-gray-600 transition-colors font-medium">Brands</span>

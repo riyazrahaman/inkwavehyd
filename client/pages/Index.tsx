@@ -122,7 +122,7 @@ const Index = () => {
       {/* New Arrivals */}
       <section className="px-4 lg:px-24 py-12 lg:py-16 max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-5xl font-black text-center mb-8 lg:mb-12 tracking-tight">NEW ARRIVALS</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {[
             {
               image: "https://api.builder.io/api/v1/image/assets/TEMP/22995a49d04a8f3970a4eb63b975cb6b7fe646ab?width=592",
@@ -132,7 +132,7 @@ const Index = () => {
             },
             {
               image: "https://api.builder.io/api/v1/image/assets/TEMP/5d1fa856e4fe0859626efa29dabb1722cf046199?width=536",
-              name: "SKINNY FIT JEANS", 
+              name: "SKINNY FIT JEANS",
               rating: 3.5,
               price: "$240",
               originalPrice: "$260",
@@ -149,37 +149,37 @@ const Index = () => {
               name: "SLEEVE STRIPED T-SHIRT",
               rating: 4.5,
               price: "$130",
-              originalPrice: "$160", 
+              originalPrice: "$160",
               discount: "-30%"
             }
           ].map((product, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="bg-gray-100 rounded-xl overflow-hidden mb-4 aspect-square">
-                <img 
-                  src={product.image} 
+              <div className="bg-gray-100 rounded-xl lg:rounded-2xl overflow-hidden mb-3 lg:mb-4 aspect-square">
+                <img
+                  src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="font-bold text-lg mb-2 lowercase">{product.name}</h3>
-              <div className="flex items-center gap-2 mb-2">
+              <h3 className="font-bold text-sm lg:text-lg mb-2 lowercase line-clamp-2">{product.name}</h3>
+              <div className="flex items-center gap-1 lg:gap-2 mb-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      size={16} 
-                      className={i < Math.floor(product.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}
+                    <Star
+                      key={i}
+                      size={14}
+                      className={`lg:w-4 lg:h-4 ${i < Math.floor(product.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
                     />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">{product.rating}/5</span>
+                <span className="text-xs lg:text-sm text-gray-600">{product.rating}/5</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-xl">{product.price}</span>
+              <div className="flex flex-wrap items-center gap-1 lg:gap-2">
+                <span className="font-bold text-lg lg:text-xl">{product.price}</span>
                 {product.originalPrice && (
                   <>
-                    <span className="text-gray-400 line-through">{product.originalPrice}</span>
-                    <span className="bg-red-100 text-red-500 px-2 py-1 rounded-full text-xs">{product.discount}</span>
+                    <span className="text-gray-400 line-through text-sm lg:text-lg">{product.originalPrice}</span>
+                    <span className="bg-red-100 text-red-500 px-2 py-1 rounded-full text-xs font-medium">{product.discount}</span>
                   </>
                 )}
               </div>

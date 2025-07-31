@@ -17,38 +17,38 @@ const Index = () => {
 
       {/* Navigation Header */}
       <header className="border-b border-gray-100 px-4 lg:px-24 py-4">
-        <div className="flex items-center justify-between gap-8">
+        <div className="flex items-center justify-between gap-4 lg:gap-8">
           {/* Logo */}
-          <div className="text-2xl lg:text-3xl font-bold text-black">SHOP.CO</div>
-          
+          <div className="text-2xl lg:text-3xl font-black text-black tracking-tight">SHOP.CO</div>
+
           {/* Navigation Menu - Hidden on mobile */}
           <nav className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-1 cursor-pointer">
-              <span>Shop</span>
+            <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors">
+              <span className="font-medium">Shop</span>
               <ChevronDown size={16} />
             </div>
-            <span className="cursor-pointer">On Sale</span>
-            <span className="cursor-pointer">New Arrivals</span>
-            <span className="cursor-pointer">Brands</span>
+            <span className="cursor-pointer hover:text-gray-600 transition-colors font-medium">On Sale</span>
+            <span className="cursor-pointer hover:text-gray-600 transition-colors font-medium">New Arrivals</span>
+            <span className="cursor-pointer hover:text-gray-600 transition-colors font-medium">Brands</span>
           </nav>
 
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden lg:flex flex-1 max-w-xl">
             <div className="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-3 w-full">
               <Search size={20} className="text-gray-400" />
-              <input 
-                type="text" 
-                placeholder="Search for products..." 
-                className="bg-transparent outline-none flex-1 text-gray-600"
+              <input
+                type="text"
+                placeholder="Search for products..."
+                className="bg-transparent outline-none flex-1 text-gray-600 placeholder:text-gray-400"
               />
             </div>
           </div>
 
           {/* Right Icons */}
-          <div className="flex items-center gap-4">
-            <Search size={24} className="lg:hidden" />
-            <ShoppingCart size={24} />
-            <User size={24} />
+          <div className="flex items-center gap-3 lg:gap-4">
+            <Search size={20} className="lg:hidden cursor-pointer hover:text-gray-600 transition-colors" />
+            <ShoppingCart size={20} className="cursor-pointer hover:text-gray-600 transition-colors" />
+            <User size={20} className="cursor-pointer hover:text-gray-600 transition-colors" />
           </div>
         </div>
       </header>

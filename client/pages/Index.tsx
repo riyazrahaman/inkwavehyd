@@ -126,12 +126,14 @@ const Index = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {[
             {
+              id: "1",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/22995a49d04a8f3970a4eb63b975cb6b7fe646ab?width=592",
               name: "T-SHIRT WITH TAPE DETAILS",
               rating: 4.5,
               price: "$120"
             },
             {
+              id: "2",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/5d1fa856e4fe0859626efa29dabb1722cf046199?width=536",
               name: "SKINNY FIT JEANS",
               rating: 3.5,
@@ -140,12 +142,14 @@ const Index = () => {
               discount: "-20%"
             },
             {
+              id: "3",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/8c395c9e898fc6bb053756174c869d920b5ec9db?width=592",
               name: "CHECKERED SHIRT",
               rating: 4.5,
               price: "$180"
             },
             {
+              id: "4",
               image: "https://api.builder.io/api/v1/image/assets/TEMP/71b2911ea12218c8a545b40df02e2e27066f578a?width=592",
               name: "SLEEVE STRIPED T-SHIRT",
               rating: 4.5,
@@ -153,8 +157,8 @@ const Index = () => {
               originalPrice: "$160",
               discount: "-30%"
             }
-          ].map((product, index) => (
-            <div key={index} className="group cursor-pointer">
+          ].map((product) => (
+            <Link key={product.id} to={`/product/${product.id}`} className="group cursor-pointer block">
               <div className="bg-gray-100 rounded-xl lg:rounded-2xl overflow-hidden mb-3 lg:mb-4 aspect-square">
                 <img
                   src={product.image}
@@ -184,7 +188,7 @@ const Index = () => {
                   </>
                 )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="text-center mt-8 lg:mt-12">

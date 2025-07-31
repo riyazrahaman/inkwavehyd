@@ -108,20 +108,20 @@ const Index = () => {
 
       {/* Brand Logos */}
       <section className="bg-black py-8 lg:py-12">
-        <div className="px-4 lg:px-24">
-          <div className="flex justify-center items-center gap-8 lg:gap-16 flex-wrap">
-            <div className="text-white font-bold text-2xl lg:text-3xl">VERSACE</div>
-            <div className="text-white font-bold text-2xl lg:text-3xl">ZARA</div>
-            <div className="text-white font-bold text-2xl lg:text-3xl">GUCCI</div>
-            <div className="text-white font-bold text-2xl lg:text-3xl">PRADA</div>
-            <div className="text-white font-bold text-2xl lg:text-3xl">Calvin Klein</div>
+        <div className="px-4 lg:px-24 max-w-7xl mx-auto">
+          <div className="flex justify-center items-center gap-6 sm:gap-8 lg:gap-16 flex-wrap">
+            <div className="text-white font-bold text-lg sm:text-xl lg:text-3xl">VERSACE</div>
+            <div className="text-white font-bold text-lg sm:text-xl lg:text-3xl">ZARA</div>
+            <div className="text-white font-bold text-lg sm:text-xl lg:text-3xl">GUCCI</div>
+            <div className="text-white font-bold text-lg sm:text-xl lg:text-3xl">PRADA</div>
+            <div className="text-white font-bold text-lg sm:text-xl lg:text-3xl hidden sm:block">Calvin Klein</div>
           </div>
         </div>
       </section>
 
       {/* New Arrivals */}
-      <section className="px-4 lg:px-24 py-16">
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-12">NEW ARRIVALS</h2>
+      <section className="px-4 lg:px-24 py-12 lg:py-16 max-w-7xl mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-black text-center mb-8 lg:mb-12 tracking-tight">NEW ARRIVALS</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {

@@ -104,7 +104,7 @@ const Category = () => {
 
       {/* Header */}
       <div className="flex justify-between items-center px-4 lg:px-24 py-4 max-w-7xl mx-auto">
-        <Link to="/" className="text-2xl lg:text-3xl font-black">SHOP.CO</Link>
+        <Link to="/" className="text-2xl lg:text-3xl font-black">inkwavehyd</Link>
         
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-1 cursor-pointer">

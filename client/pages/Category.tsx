@@ -395,7 +395,7 @@ const Category = () => {
         <div className="max-w-7xl mx-auto px-4 lg:px-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-black mb-6">SHOP.CO</h3>
+              <h3 className="text-2xl font-black mb-6">inkwavehyd</h3>
               <p className="text-gray-600 mb-6">
                 We have clothes that suits your style and which you're proud to wear. From women to men.
               </p>
